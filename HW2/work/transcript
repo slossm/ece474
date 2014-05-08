@@ -1,0 +1,4 @@
+# vsim -c -quiet -t 1ps alu alu.do 
+# ** Error: (vsim-19) Failed to access library 'alu' at "alu".
+# No such file or directory. (errno = ENOENT)
+# Error loading design
