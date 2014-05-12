@@ -7,7 +7,7 @@
 #Move the .synopsys_dc.setup file into directory
 #Run this file with ./make.sh
 
-SRC_FILE="rtl_src/alu"
+SRC_FILE="fifo"
 
 NAME=`echo "$SRC_FILE" | awk -F '/' '{print $NF}'`
 

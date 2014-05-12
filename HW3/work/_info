@@ -2,4 +2,48 @@ m255
 K3
 13
 cModel Technology
-d/nfs/stak/students/s/slossm/ece474/HW3
+Z0 d/nfs/stak/students/s/slossm/ece474/HW3
+T_opt
+VbMHUz`e^;]9_^_;9;dW2>3
+04 2 4 work tb fast 0
+Z1 =1-001e68378ddc-5370586f-c14a1-6b32
+Z2 o-quiet -auto_acc_if_foreign -work work
+Z3 n@_opt
+Z4 OE;O;6.6a;45
+Z5 d/nfs/stak/students/s/slossm/ece474/HW3
+vfifo
+Z6 Mx1 6 sv_std 3 std
+Z7 DXx6 sv_std 3 std 0 22 WnQ=;W1X^o9K1PIQTgInR3
+Z8 IB0=_]af3QHV^a0hf9hX3g3
+Z9 V=5iUVeXZQi1[LYGM2C<:j0
+S1
+R5
+Z10 w1399871584
+Z11 8fifo.sv
+Z12 Ffifo.sv
+L0 2
+Z13 OE;L;6.6a;45
+r1
+31
+Z14 o-L mtiAvm -L mtiOvm -L mtiUPF
+Z15 !s100 bz1^Mz=z>:e9QI?Rk:zLS3
+Z16 !s105 fifo_sv_unit
+!s85 0
+vtb
+R6
+R7
+Z17 IQI=?_ic[=_?:B9zejFnQ[0
+Z18 VHTnK?KgWBUnzYPVCZ0AZ?0
+S1
+R5
+Z19 w1399508919
+Z20 8tb.sv
+Z21 Ftb.sv
+L0 9
+R13
+r1
+31
+R14
+Z22 !s100 SbLZMR>UNejMnBP?Cl1kc3
+Z23 !s105 tb_sv_unit
+!s85 0
