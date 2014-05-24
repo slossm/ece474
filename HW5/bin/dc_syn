@@ -51,7 +51,7 @@ set_output_delay -min -0.150  -clock my_clk [all_outputs]
 set_driving_cel -lib_cell SDFFARX1 [remove_from_collection [all_inputs] [get_ports my_clock]]
 
 # Indicate the capacitive loading on the outputs equal to 5 inv_2 inverter inputs.
-set_load [expr 5 * [load_of saed90nm_typ/"INVERTER_GOES_HERE_FIND_IT"]] [all_outputs]
+set_load [expr 5 * [load_of saed90nm_typ/INVX1/IN]] [all_outputs]
 # Compile with completely disolved design
 compile -ungroup_all
 
