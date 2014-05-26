@@ -1,0 +1,30 @@
+Information: Updating graph... (UID-83)
+ 
+****************************************
+Report : area
+Design : gcd
+Version: E-2010.12-SP2
+Date   : Sun May 25 19:56:02 2014
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    saed90nm_typ (File: /nfs/guille/a1/cadlibs/synop_lib/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ_pg.db)
+
+Number of ports:                          100
+Number of nets:                           751
+Number of cells:                          637
+Number of combinational cells:            539
+Number of sequential cells:                98
+Number of macros:                           0
+Number of buf/inv:                        178
+Number of references:                      33
+
+Combinational area:       5206.784066
+Noncombinational area:    3161.088051
+Net Interconnect area:     371.346198  
+
+Total cell area:          8367.872117
+Total area:               8739.218314
+1

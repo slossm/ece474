@@ -1,0 +1,312 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+           Version E-2010.12-SP2 for linux -- Feb 25, 2011
+               Copyright (c) 1988-2011 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+#synopsys synthesis script
+#boilerplate
+set hdlin_auto_save_templates true
+true
+set hdlin_check_no_latch      true
+true
+read_sverilog  rtl_src/gcd.sv 
+Loading db file '/nfs/guille/a1/cadlibs/synop_lib/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ_pg.db'
+Loading db file '/usr/local/apps/synopsys/current_synthesis/libraries/syn/gtech.db'
+Loading db file '/usr/local/apps/synopsys/current_synthesis/libraries/syn/standard.sldb'
+  Loading link library 'saed90nm_typ'
+  Loading link library 'gtech'
+Loading sverilog file '/nfs/stak/students/s/slossm/ece474/HW5/rtl_src/gcd.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /nfs/stak/students/s/slossm/ece474/HW5/rtl_src/gcd.sv
+Warning:  /nfs/stak/students/s/slossm/ece474/HW5/rtl_src/gcd.sv:60: Case statement marked unique does not cover all possible conditions. (VER-504)
+
+Statistics for case statements in always block at line 43 in file
+	'/nfs/stak/students/s/slossm/ece474/HW5/rtl_src/gcd.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            47            |    user/user     |
+===============================================
+Warning:  /nfs/stak/students/s/slossm/ece474/HW5/rtl_src/gcd.sv:60: Case statement marked unique does not cover all possible conditions. (VER-504)
+
+Statistics for case statements in always block at line 56 in file
+	'/nfs/stak/students/s/slossm/ece474/HW5/rtl_src/gcd.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            60            |    user/user     |
+===============================================
+
+Statistics for case statements in always block at line 68 in file
+	'/nfs/stak/students/s/slossm/ece474/HW5/rtl_src/gcd.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            72            |    user/user     |
+===============================================
+
+Statistics for case statements in always block at line 100 in file
+	'/nfs/stak/students/s/slossm/ece474/HW5/rtl_src/gcd.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           103            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 120 in file
+	'/nfs/stak/students/s/slossm/ece474/HW5/rtl_src/gcd.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           124            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine gcd line 43 in file
+		'/nfs/stak/students/s/slossm/ece474/HW5/rtl_src/gcd.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      reg_a_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine gcd line 56 in file
+		'/nfs/stak/students/s/slossm/ece474/HW5/rtl_src/gcd.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      reg_b_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine gcd line 68 in file
+		'/nfs/stak/students/s/slossm/ece474/HW5/rtl_src/gcd.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     result_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine gcd line 93 in file
+		'/nfs/stak/students/s/slossm/ece474/HW5/rtl_src/gcd.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     gcd_ps_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/nfs/stak/students/s/slossm/ece474/HW5/rtl_src/gcd.db:gcd'
+Loaded 1 design.
+Current design is 'gcd'.
+gcd
+current_design gcd 
+Current design is 'gcd'.
+{gcd}
+link
+
+  Linking design 'gcd'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  gcd                         /nfs/stak/students/s/slossm/ece474/HW5/rtl_src/gcd.db
+  saed90nm_typ (library)      /nfs/guille/a1/cadlibs/synop_lib/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ_pg.db
+
+1
+##### constraints are below #####
+#erase all attributes and constrains from the current design
+reset_design
+1
+#set the environmental conditons to TYPICAL
+set_operating_conditions -max TYPICAL
+Using operating conditions 'TYPICAL' found in library 'saed90nm_typ'.
+1
+#set wire loading model to 8000
+set_wire_load_model -name 8000
+1
+#set wire loading mode to top  
+set_wire_load_mode top 
+1
+# Define the clock period as 2ns and clock port (2ns clock period)
+# Give the clock the name "my_clock"
+create_clock -period 2 -name my_clock  [get_ports clk]
+1
+# Set the clock uncertainty relative to my_clock as +/- 20pS
+set_clock_uncertainty -setup 0.02 [get_clocks my_clock]
+1
+set_clock_uncertainty -hold  0.02 [get_clocks my_clock]
+1
+# set the "input valid" delay to 1.0nS
+# exclude clock from the inputs expecting the delay
+set_input_delay 1.0 -max -clock my_clock [remover_from_collection [all_inputs] [get_ports clk]]
+Error: unknown command 'remover_from_collection' (CMD-005)
+# set the setup time requirements for the next block to 1nS
+# exclude clock from the inputs expecting the delay
+set_output_delay 1 -max -clock my_clock [all_outputs]
+1
+#The next two are hard to get right, so I'll be nice!
+#set the fastest input data arrival time to check for hold time changes to 100pS
+set_input_delay -min 0.100 -clock my_clock [remove_from_collection [all_inputs] [get_ports clk]]
+1
+# set the hold time requirements for the next block to 150pS
+set_output_delay -min -0.150 -clock my_clock [all_outputs]
+1
+# Indicate the drive characteristics of what drives the inputs:
+# Use SDFFARX1 as the driving cell
+set_driving_cel -lib_cell SDFFARX1 [remove_from_collection [all_inputs] [get_ports clk]]
+1
+# Indicate the capacitive loading on the outputs equal to 5 inv_2 inverter inputs.
+set_load [expr 5 * [load_of saed90nm_typ/INVX1/IN]] [all_outputs]
+1
+# Compile with completely disolved design
+compile -ungroup_all
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | E-2010.12-DWBB_201012.2 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'gcd'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Total 0 isolation cells are inserted. (UPF-214)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'DW01_sub_width32'
+  Processing 'DW01_cmp2_width32'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:06   15823.2      1.08      69.9       0.0                          
+    0:00:06   15813.8      1.08      69.6       0.0                          
+    0:00:06   15813.8      1.08      69.6       0.0                          
+    0:00:06   15806.5      1.08      69.6       0.0                          
+    0:00:06   15806.5      1.08      69.6       0.0                          
+    0:00:06    9119.3      2.12     114.7       0.0                          
+    0:00:07    9028.2      3.47     150.8       0.0                          
+    0:00:07    9089.4      1.05      61.9       0.0                          
+    0:00:07    9092.0      0.94      55.5       0.0                          
+    0:00:07    9113.2      0.86      50.3       0.0                          
+    0:00:07    9140.3      0.78      45.9       0.0                          
+    0:00:07    9136.3      0.67      41.5       0.0                          
+    0:00:07    9126.4      0.66      40.8       0.0                          
+    0:00:07    9131.6      0.64      39.4       0.0                          
+    0:00:07    9145.7      0.63      38.6       0.0                          
+    0:00:07    9240.6      0.50      30.2       0.0                          
+    0:00:07    9214.0      0.49      29.9       0.0                          
+    0:00:07    9275.5      0.43      26.2       0.0                          
+    0:00:07    9275.5      0.43      26.2       0.0                          
+    0:00:07    9275.5      0.43      26.2       0.0                          
+    0:00:07    9275.5      0.43      26.2       0.0                          
+    0:00:07    9275.5      0.43      26.2       0.0                          
+    0:00:07    9275.5      0.43      26.2       0.0                          
+    0:00:07    9275.5      0.43      26.2       0.0                          
+    0:00:07    9458.7      0.30      18.0       0.0 reg_a_reg[2]/D           
+    0:00:08    9472.8      0.29      18.4       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:08    9472.8      0.29      18.4       0.0                          
+    0:00:08    9565.5      0.15       9.0       0.0 reg_a_reg[7]/D           
+    0:00:08    9646.2      0.12       7.2       0.0 reg_a_reg[31]/D          
+    0:00:08    9660.4      0.08       4.3       0.0 reg_a_reg[31]/D          
+    0:00:09    9658.0      0.00       0.0       0.0 reg_a_reg[7]/D           
+    0:00:09    9658.0      0.00       0.0       0.0                          
+    0:00:09    9570.6      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:09    9570.6      0.00       0.0       0.0                          
+    0:00:09    9570.6      0.00       0.0       0.0                          
+    0:00:09    9207.5      0.00       0.0       0.0                          
+    0:00:09    9087.5      0.00       0.0       0.0                          
+    0:00:09    9065.9      0.00       0.0       0.0                          
+    0:00:09    9046.2      0.00       0.0       0.0                          
+    0:00:09    9035.0      0.00       0.0       0.0                          
+    0:00:09    9035.0      0.00       0.0       0.0                          
+    0:00:09    9035.0      0.00       0.0       0.0                          
+    0:00:09    8753.9      0.03       0.6       0.0                          
+    0:00:09    8714.6      0.03       0.6       0.0                          
+    0:00:09    8714.6      0.03       0.6       0.0                          
+    0:00:09    8714.6      0.03       0.6       0.0                          
+    0:00:09    8714.6      0.03       0.6       0.0                          
+    0:00:09    8714.6      0.03       0.6       0.0                          
+    0:00:09    8714.6      0.03       0.6       0.0                          
+    0:00:09    8739.2      0.00       0.0       0.0                          
+Loading db file '/nfs/guille/a1/cadlibs/synop_lib/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ_pg.db'
+
+  Optimization Complete
+  ---------------------
+1
+# Make sure we are at the top level
+set current_design  gcd 
+gcd
+# Generate area and constraints reports on the optimized design
+report_area    > reports/area
+# Generate timing report for worst case path
+report_timing  > reports/delay
+# Generate timing report for hold time 
+report_timing [-min_delay] > reports/hold_error
+Error: unknown command '-min_delay' (CMD-005)
+# Find what cells were used to check for latches
+report_hierarchy -full  -nosplit  > reports/cells_used
+#run a design check
+check_design > reports/check_design  
+# Save the optimized design
+write -format verilog -hierarchy -output  vlogout/gcd.gate.v
+Writing verilog file '/nfs/stak/students/s/slossm/ece474/HW5/vlogout/gcd.gate.v'.
+1
+write_sdf sdfout/gcd.gate.sdf -context verilog
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/nfs/stak/students/s/slossm/ece474/HW5/sdfout/gcd.gate.sdf'. (WT-3)
+1
+quit
+
+Thank you...
