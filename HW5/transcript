@@ -1,4 +1,5 @@
 # vsim +nowarnTFMPC +nowarn3448 -do dofile -c -quiet -sdfmax /tb/gcd_0=sdfout/gcd.gate.sdf -t 1ps tb 
+# ** Note: (vsim-3812) Design is being optimized...
 # //  ModelSim SE 6.6a Mar 19 2010 Linux 2.6.32-431.1.2.el6.x86_64
 # //
 # //  Copyright 1991-2010 Mentor Graphics Corporation

@@ -150,7 +150,19 @@ fi
 dc_shell-xg-t -f bin/dc_syn > logs/synth_log
 
 #check for latches in synthesized design
-##grep.....
+grep "latch" reports/area > reports/latches_used
+if [ $? -ne 0 ]; then
+    echo "******************"
+    echo " No Latches Found "
+    echo "******************"
+else
+    echo "*******************"
+    echo "*                 *"
+    echo "* LATCHES FOUND!  *"
+    echo "*                 *"
+    echo "*******************"
+fi
+    
 
 #check for errors in synthesis from latches being included
 #if latches are found, report it
