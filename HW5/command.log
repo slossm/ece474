@@ -1,7 +1,7 @@
 #@ # 
 #@ # Running dc_shell Version E-2010.12-SP2 for linux -- Feb 25, 2011
-#@ # Date:   Sun May 25 19:55:50 2014
-#@ # Run by: slossm@flip3.engr.oregonstate.edu
+#@ # Date:   Mon May 26 15:39:02 2014
+#@ # Run by: slossm@flip1.engr.oregonstate.edu
 #@ 
 
 source /usr/local/apps/synopsys/current_synthesis/admin/setup/.synopsys_dc.setup
@@ -4755,7 +4755,7 @@ source -echo -verbose /nfs/stak/students/s/slossm/ece474/HW5/bin/dc_syn
 #@ 
 #@ # set the "input valid" delay to 1.0nS
 #@ # exclude clock from the inputs expecting the delay
-#@ set_input_delay 1.0 -max -clock my_clock [remover_from_collection [all_inputs] [get_ports clk]]
+#@ set_input_delay 1.0 -max -clock my_clock [remove_from_collection [all_inputs] [get_ports clk]]
 #@ 
 #@ # set the setup time requirements for the next block to 1nS
 #@ # exclude clock from the inputs expecting the delay
@@ -4787,7 +4787,8 @@ source -echo -verbose /nfs/stak/students/s/slossm/ece474/HW5/bin/dc_syn
 #@ report_timing  > reports/delay
 #@ 
 #@ # Generate timing report for hold time 
-#@ report_timing [-min_delay] > reports/hold_error
+#@ #report_timing -delay max > reports/setup_error
+#@ report_timing -delay min > reports/hold_error
 #@ 
 #@ # Find what cells were used to check for latches
 #@ report_hierarchy -full  -nosplit  > reports/cells_used

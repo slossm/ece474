@@ -33,7 +33,7 @@ set_clock_uncertainty -hold  0.02 [get_clocks my_clock]
 
 # set the "input valid" delay to 1.0nS
 # exclude clock from the inputs expecting the delay
-set_input_delay 1.0 -max -clock my_clock [remover_from_collection [all_inputs] [get_ports clk]]
+set_input_delay 1.0 -max -clock my_clock [remove_from_collection [all_inputs] [get_ports clk]]
 
 # set the setup time requirements for the next block to 1nS
 # exclude clock from the inputs expecting the delay
@@ -65,7 +65,8 @@ report_area    > reports/area
 report_timing  > reports/delay
 
 # Generate timing report for hold time 
-report_timing [-min_delay] > reports/hold_error
+#report_timing -delay max > reports/setup_error
+report_timing -delay min > reports/hold_error
 
 # Find what cells were used to check for latches
 report_hierarchy -full  -nosplit  > reports/cells_used
