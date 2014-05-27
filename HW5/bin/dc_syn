@@ -48,7 +48,7 @@ set_output_delay -min -0.150 -clock my_clock [all_outputs]
 
 # Indicate the drive characteristics of what drives the inputs:
 # Use SDFFARX1 as the driving cell
-set_driving_cel -lib_cell SDFFARX1 [remove_from_collection [all_inputs] [get_ports clk]]
+set_driving_cell -lib_cell SDFFARX1 [remove_from_collection [all_inputs] [get_ports clk]]
 
 # Indicate the capacitive loading on the outputs equal to 5 inv_2 inverter inputs.
 set_load [expr 5 * [load_of saed90nm_typ/INVX1/IN]] [all_outputs]
