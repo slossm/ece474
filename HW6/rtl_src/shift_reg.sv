@@ -1,10 +1,3 @@
-/********************************************************************
-Name: shift_reg.sv
-Author: Jesse Wilson
-ECE 474 Homework 6
-********************************************************************/
-
-
 module shift_reg (
 	input		  clk,
 	input		  reset_n,
@@ -16,19 +9,19 @@ module shift_reg (
 	reg [7:0] bits;
 	
 
-//shifted in data	
+//seiral data shifted in	
 always_ff @(posedge clk, negedge reset_n) 
 begin
-	if(!reset_n) bits <= '0;
+	if(!reset_n)	    bits <= '0;
 
-	else if(serial_en) begin
-		bits <= (bits >> 1);
-		bits[7] <= serial_data;
-	end
+	else if(serial_en)  begin
+			    bits <= (bits >> 1);
+			    bits[7] <= serial_data;
+			    end
 end
 
 
-//always available output data
+//output data always avalable
 always_comb
 begin
 	parallel_data = bits;

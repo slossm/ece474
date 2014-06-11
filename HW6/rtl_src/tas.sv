@@ -1,10 +1,3 @@
-/********************************************************************
-Name: tas.sv
-Author: Jesse Wilson
-ECE 474 Homework 6
-********************************************************************/
-
-
 module tas (
 	input		clk_50,        // 50Mhz input clock
        	input  		clk_2,         // 2Mhz input clock
@@ -20,7 +13,7 @@ module tas (
 	reg		read;
 	reg [7:0]	fifo_out;
 	reg		fifo_empty;
-	reg		zero_sel;
+	reg		ac_clear;
 	reg		a5_or_c3;
 
 
@@ -46,9 +39,9 @@ ctrl_50mhz ctrl_50mhz_0 (
 ctrl_2mhz ctrl_2mhz_0 (
 	.clk		(clk_2),
 	.reset_n	(reset_n),
-	.fifo_empty	(fifo_empty),
+	.empty		(fifo_empty),
 	.read		(read),
-	.zero_sel	(zero_sel),
+	.ac_clear	(ac_clear),
 	.write_ram	(ram_wr_n)
 );
 
@@ -62,7 +55,7 @@ shift_reg shift_reg_0 (
 );
 
 
-fifo32 fifo32_0 (
+fifo fifo_0 (
 	.wr_clk		(clk_50),
 	.rd_clk		(clk_2),
 	.reset_n	(reset_n),
@@ -78,7 +71,7 @@ fifo32 fifo32_0 (
 averager averager_0 (
 	.clk		(clk_2),
 	.reset_n	(reset_n),
-	.zero_sel	(zero_sel),
+	.ac_clear	(ac_clear),
 	.read		(read),
 	.data_in	(fifo_out),
 	.data_out	(ram_data)
